@@ -14,7 +14,7 @@ public class BulletScript : ObjectScript
     public override void OnObjectAddForce()
     {
         Vector3 force = barrelTransform.forward * bulletForce;
-        GetComponent<Rigidbody>().AddForce(force, ForceMode.Impulse);
+        GetComponent<Rigidbody>().AddForce(force);
     }
 
     private void GetBarrelTransform()
