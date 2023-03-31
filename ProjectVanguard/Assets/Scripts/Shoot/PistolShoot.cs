@@ -12,12 +12,14 @@ public class PistolShoot : Spawner
     public float fireRate = 15f;
     public float nextTimeToFire = 0f;
 
+
     public Camera fpsCam;
 
     private void Awake()
     {
         poolTag = "Bullet";
     }
+
     protected override void SpawnObject()
     {
         
@@ -25,17 +27,14 @@ public class PistolShoot : Spawner
         {
             return;
         }
+
+
+
         if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= nextTimeToFire)
         {
 
             nextTimeToFire = Time.time + 1f / fireRate;
             this.Shoot();
-
-            //spawn bullet
-            GameObject bulletObj;
-            bulletObj = objectPooler.SpawnFromPool(poolTag, barrelTransform.position, barrelTransform.rotation) as GameObject;
-            //disable bullet after 3 seconds
-            StartCoroutine(DisableBullet(bulletObj));
 
             if (AudioManager.Instance == null)
             {
@@ -46,6 +45,14 @@ public class PistolShoot : Spawner
                 AudioManager.Instance.PlaySFX("PistolFire");
             }
 
+            //spawn bullet
+            GameObject bulletObj;
+            bulletObj = objectPooler.SpawnFromPool(poolTag, barrelTransform.position, barrelTransform.rotation) as GameObject;
+            //disable bullet after 3 seconds
+            StartCoroutine(DisableBullet(bulletObj));
+
+            
+
             
 
         }
@@ -53,6 +60,8 @@ public class PistolShoot : Spawner
 
     private void Shoot()
     {
+
+
         RaycastHit hit;
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {

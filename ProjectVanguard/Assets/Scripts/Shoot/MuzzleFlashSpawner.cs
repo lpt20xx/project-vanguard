@@ -22,7 +22,7 @@ public class MuzzleFlashSpawner : PistolShoot
             nextTimeToFire = Time.time + 1f / fireRate;
 
             GameObject tempFlash;
-            tempFlash = objectPooler.SpawnFromPool(poolTag, barrelTransform.position, barrelTransform.rotation);
+            tempFlash = objectPooler.SpawnFromPool(poolTag, barrelTransform.position, barrelTransform.rotation) as GameObject;
             StartCoroutine(DisableMuzzleFlash(tempFlash));
         }
     }

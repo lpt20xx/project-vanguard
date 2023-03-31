@@ -8999,6 +8999,9 @@ MonoBehaviour:
   range: 100
   fireRate: 15
   nextTimeToFire: 0
+  maxAmmo: 7
+  currentAmmo: 0
+  reloadTime: 1
   fpsCam: {fileID: 1207619754}
 --- !u!1 &284406169
 GameObject:
@@ -9475,7 +9478,6 @@ MonoBehaviour:
   winText: {fileID: 131774697}
   crosshair: {fileID: 813725105}
   playerHealth: {fileID: 1448904427}
-  fadeOut: {fileID: 1251772227}
   enemy: {fileID: 1013447094}
   levelControl: {fileID: 966635931}
 --- !u!1 &356087977 stripped
@@ -9968,6 +9970,9 @@ MonoBehaviour:
   range: 100
   fireRate: 15
   nextTimeToFire: 0
+  maxAmmo: 7
+  currentAmmo: 0
+  reloadTime: 1
   fpsCam: {fileID: 1207619754}
   casingExitTransform: {fileID: 4821985707399739060}
   ejectPower: 150
@@ -13080,7 +13085,7 @@ MonoBehaviour:
     size: 15
     parentTransform: {fileID: 497089051}
   - tag: MuzzleFlash
-    prefab: {fileID: 4792657488935396388, guid: 0de5f48c884c6c14fb20b18bae97ad16, type: 3}
+    prefab: {fileID: 277238983}
     size: 15
     parentTransform: {fileID: 277238984}
   - tag: YBot
@@ -15056,6 +15061,9 @@ MonoBehaviour:
   range: 100
   fireRate: 15
   nextTimeToFire: 0
+  maxAmmo: 7
+  currentAmmo: 0
+  reloadTime: 1
   fpsCam: {fileID: 1207619754}
 --- !u!1 &9171099973840102
 GameObject:
