@@ -15,6 +15,8 @@ public class CasingSpawner : PistolShoot
     }
     protected override void SpawnObject()
     {
+
+
         if (PlayerHealth.isDead)
         {
             return;

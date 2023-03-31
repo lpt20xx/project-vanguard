@@ -15,14 +15,14 @@ public class LevelCompleteScript : MonoBehaviour
 
     private void Victory()
     {
+        AudioManager.Instance.musicSource.Stop();
         if (AudioManager.Instance == null)
         {
             return;
         }
-        if (Scoring.isWin)
-        {
-            StartCoroutine(BackToMenuDelay());
-        }
+
+        StartCoroutine(BackToMenuDelay());
+        
     }
 
     IEnumerator BackToMenuDelay()

@@ -19,7 +19,6 @@ public class Scoring : MonoBehaviour
 
     public GameObject levelControl;
 
-    public static bool isWin = false;
     private void Start()
     {
         this.SetStartScore();
@@ -57,15 +56,6 @@ public class Scoring : MonoBehaviour
             enemy.SetActive(false);
 
             winText.SetActive(true);
-
-            if(AudioManager.Instance == null)
-            {
-                return;
-            }
-
-            AudioManager.Instance.musicSource.Stop();
-            
-            isWin = true;
 
             levelControl.GetComponent<LevelCompleteScript>().enabled = true;
         }

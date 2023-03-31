@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - PatrolPoint
   - Barrel
+  - View
   layers:
   - Default
   - TransparentFX

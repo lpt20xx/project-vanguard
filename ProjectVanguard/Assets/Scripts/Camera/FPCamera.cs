@@ -8,7 +8,7 @@ public class FPCamera : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private float mouseSensitivity = 2f;
     [SerializeField] private float cameraVerticalRotation = 0f;
-    [SerializeField] private float aimDuration = 0.3f;
+    //[SerializeField] private float aimDuration = 0.3f;
 
     public bool lockedCursor = false;
 

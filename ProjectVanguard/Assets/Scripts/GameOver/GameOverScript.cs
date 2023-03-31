@@ -14,7 +14,12 @@ public class GameOverScript : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        StartCoroutine(EndLevel());
+        this.EndLevel();
+    }
+
+    private void EndLevel()
+    {
+        StartCoroutine(EndLevelDelay());
 
         if (AudioManager.Instance == null)
         {
@@ -22,11 +27,8 @@ public class GameOverScript : MonoBehaviour
         }
 
         AudioManager.Instance.musicSource.Stop();
-
-        
     }
-
-    IEnumerator EndLevel()
+    IEnumerator EndLevelDelay()
     {
         
         yield return new WaitForSeconds(1f);

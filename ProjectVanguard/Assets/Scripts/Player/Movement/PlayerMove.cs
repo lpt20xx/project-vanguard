@@ -52,12 +52,13 @@ public class PlayerMove : MonoBehaviour
         if (PlayerHealth.isDead)
         {
             moveSpeed = 0f;
-            verticalMove = 0f;
-            horizontalMove = 0f;
-            jump = 0f;
             return;
         }
-
+        else
+        {
+            moveSpeed = 5f;
+            return;
+        }
         
         
     }

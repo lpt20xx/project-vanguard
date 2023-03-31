@@ -20,9 +20,12 @@ public class PistolShoot : Spawner
         poolTag = "Bullet";
     }
 
+
+
     protected override void SpawnObject()
     {
         
+
         if (PlayerHealth.isDead)
         {
             return;
@@ -60,7 +63,6 @@ public class PistolShoot : Spawner
 
     private void Shoot()
     {
-
 
         RaycastHit hit;
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))

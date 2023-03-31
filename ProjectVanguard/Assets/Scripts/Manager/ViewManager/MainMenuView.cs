@@ -54,7 +54,9 @@ public class MainMenuView : View
     public void StartGame()
     {
         //load scene in build settings (file -> buid settings)
-        SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
+        //SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
+
+        PlayerHealth.isDead = false;
     }
     //how to play
     public void HowToPlay()

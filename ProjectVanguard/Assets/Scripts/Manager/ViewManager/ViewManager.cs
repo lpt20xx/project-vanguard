@@ -13,8 +13,8 @@ public class ViewManager : MonoBehaviour
 
     private readonly Stack<View> history = new Stack<View>();
 
-    
 
+    [SerializeField] private GameObject[] viewsObj;
     public static T GetView<T>() where T : View
     {
         for(int i = 0; i < instance.views.Length; i++)
@@ -34,15 +34,18 @@ public class ViewManager : MonoBehaviour
         {
             if (instance.views[i] is T)
             {
-                if(instance.currentView != null)
+                if(instance.currentView == null)
                 {
-                    if (remember)
-                    {
-                        instance.history.Push(instance.currentView);
-                    }
-
-                    instance.currentView.Hide();
+                    return;
                 }
+
+                if (remember)
+                {
+                    instance.history.Push(instance.currentView);
+                }
+
+                instance.currentView.Hide();
+
                 instance.views[i].Show();
 
                 instance.currentView = instance.views[i];
@@ -80,6 +83,11 @@ public class ViewManager : MonoBehaviour
 
     private void Awake()
     {
+        this.CheckInstance();
+    }
+
+    private void CheckInstance()
+    {
         if (instance == null)
         {
             instance = this;
@@ -89,8 +97,8 @@ public class ViewManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
     }
+
 
     private void Start()
     {
