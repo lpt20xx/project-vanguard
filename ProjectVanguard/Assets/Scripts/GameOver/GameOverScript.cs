@@ -27,7 +27,7 @@ public class GameOverScript : MonoBehaviour
     IEnumerator EndLevel()
     {
         
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         AudioManager.Instance.musicSource.Stop();
         AudioManager.Instance.PlaySFX("GameOver");

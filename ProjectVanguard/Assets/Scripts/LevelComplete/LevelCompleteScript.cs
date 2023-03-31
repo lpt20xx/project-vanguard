@@ -21,14 +21,16 @@ public class LevelCompleteScript : MonoBehaviour
         }
         if (Scoring.isWin)
         {
-            fadeOut.SetActive(true);
-            AudioManager.Instance.PlaySFX("LevelComplete");
+            StartCoroutine(BackToMenuDelay());
         }
-        StartCoroutine(BackToMenuDelay());
     }
 
     IEnumerator BackToMenuDelay()
     {
+        yield return new WaitForSeconds(1f);
+        fadeOut.SetActive(true);
+        AudioManager.Instance.PlaySFX("LevelComplete");
+
         yield return new WaitForSeconds(5f);
         SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
         AudioManager.Instance.PlayMusic("MainMenuBGM");
