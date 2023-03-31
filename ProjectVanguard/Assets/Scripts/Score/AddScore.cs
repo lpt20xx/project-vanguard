@@ -27,6 +27,9 @@ public class AddScore : MonoBehaviour
     IEnumerator RespawnEnemyDelay()
     {
         yield return new WaitForSeconds(4f);
+        
+        Vector3 randomPos = new Vector3(Random.Range(715, 730), 20, Random.Range(210, 225));
+        yBot.transform.position = randomPos;
         yBot.SetActive(true);
     }
 }
