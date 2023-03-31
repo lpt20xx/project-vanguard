@@ -8999,9 +8999,6 @@ MonoBehaviour:
   range: 100
   fireRate: 15
   nextTimeToFire: 0
-  maxAmmo: 7
-  currentAmmo: 0
-  reloadTime: 1
   fpsCam: {fileID: 1207619754}
 --- !u!1 &284406169
 GameObject:
@@ -9970,9 +9967,6 @@ MonoBehaviour:
   range: 100
   fireRate: 15
   nextTimeToFire: 0
-  maxAmmo: 7
-  currentAmmo: 0
-  reloadTime: 1
   fpsCam: {fileID: 1207619754}
   casingExitTransform: {fileID: 4821985707399739060}
   ejectPower: 150
@@ -13085,7 +13079,7 @@ MonoBehaviour:
     size: 15
     parentTransform: {fileID: 497089051}
   - tag: MuzzleFlash
-    prefab: {fileID: 277238983}
+    prefab: {fileID: 2312355245932068927, guid: 0de5f48c884c6c14fb20b18bae97ad16, type: 3}
     size: 15
     parentTransform: {fileID: 277238984}
   - tag: YBot
@@ -15061,9 +15055,6 @@ MonoBehaviour:
   range: 100
   fireRate: 15
   nextTimeToFire: 0
-  maxAmmo: 7
-  currentAmmo: 0
-  reloadTime: 1
   fpsCam: {fileID: 1207619754}
 --- !u!1 &9171099973840102
 GameObject:
