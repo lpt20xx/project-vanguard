@@ -11787,7 +11787,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1013447094}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 714.5766, y: 19.155, z: 212.99}
+  m_LocalPosition: {x: 717.85, y: 19.155, z: 201.18}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14438,6 +14438,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1013447095}
     m_Modifications:
+    - target: {fileID: 5644421290367274301, guid: 972733b83bb805d49ab61794ee8ca0a6, type: 3}
+      propertyPath: yBot
+      value: 
+      objectReference: {fileID: 1996198784}
     - target: {fileID: 5644421290367274303, guid: 972733b83bb805d49ab61794ee8ca0a6, type: 3}
       propertyPath: m_Name
       value: Y Bot (1)

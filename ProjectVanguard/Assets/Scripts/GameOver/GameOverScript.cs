@@ -22,6 +22,8 @@ public class GameOverScript : MonoBehaviour
         }
 
         AudioManager.Instance.musicSource.Stop();
+
+        
     }
 
     IEnumerator EndLevel()

@@ -11,7 +11,6 @@ public class ViewMusic : MonoBehaviour
         //play music
         //AudioManager.Instance.musicSource.Stop();
         int rdMusic = Random.Range(1, AudioManager.Instance.GetGameBGMCount() + 1);
-        Debug.Log("RandomMusic: " + rdMusic);
 
 
         AudioManager.Instance.PlayMusic("GameBGM" + rdMusic);
