@@ -1269,7 +1269,7 @@ MonoBehaviour:
   - {fileID: 1633828006}
   - {fileID: 1796086802}
   - {fileID: 1140463509}
-  viewsObj: []
+  menuCanvas: {fileID: 1913113222}
 --- !u!1 &575609269
 GameObject:
   m_ObjectHideFlags: 0
@@ -6080,6 +6080,7 @@ MonoBehaviour:
   settingsButton: {fileID: 774589969}
   creditButton: {fileID: 2059098856}
   quitButton: {fileID: 529914954}
+  menuCanvas: {fileID: 1913113222}
 --- !u!1 &1930950535
 GameObject:
   m_ObjectHideFlags: 0

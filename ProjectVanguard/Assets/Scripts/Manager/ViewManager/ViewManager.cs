@@ -13,8 +13,6 @@ public class ViewManager : MonoBehaviour
 
     private readonly Stack<View> history = new Stack<View>();
 
-
-    [SerializeField] private GameObject[] viewsObj;
     public static T GetView<T>() where T : View
     {
         for(int i = 0; i < instance.views.Length; i++)
